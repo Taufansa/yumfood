@@ -30,6 +30,7 @@ class VendorController extends Controller
     public function store(Request $request)
     {
         //method insert vendor
+        //15 minutes
         try {
             if (is_null($request->name)) {
                 $msg = [
@@ -73,6 +74,7 @@ class VendorController extends Controller
     public function show($id)
     {
         //method show vendor
+        //5 minutes
         try {
             $data = Vendor::find($id);
             if ($data) {
@@ -101,6 +103,7 @@ class VendorController extends Controller
     public function update(Request $request, $id)
     {
         //method update vendor
+        //10 minutes
         try {
             if (is_null($request->name)) {
                 $msg = [
@@ -153,6 +156,7 @@ class VendorController extends Controller
     public function destroy($id)
     {
         //method delete vendor
+        //5 minutes
         try {
             $data = Vendor::destroy($id);
             if ($data > 0) {

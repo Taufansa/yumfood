@@ -38,6 +38,7 @@ class TagController extends Controller
     public function store(Request $request)
     {
         //method insert tags
+        //15 minutes
         try {
             if (is_null($request->name)) {
                 $msg = [
@@ -81,6 +82,7 @@ class TagController extends Controller
     public function show($id)
     {
         //method show Tag
+        //5 minutes
         try {
             $data = Tag::find($id);
             if ($data) {
@@ -120,6 +122,7 @@ class TagController extends Controller
     public function update(Request $request, $id)
     {
         //method update tag
+        //10 minutes
         try {
             if (is_null($request->name)) {
                 $msg = [
@@ -172,6 +175,7 @@ class TagController extends Controller
     public function destroy($id)
     {
         //method delete tag
+        //5 minutes
         try {
             $data = Tag::destroy($id);
             if ($data > 0) {
